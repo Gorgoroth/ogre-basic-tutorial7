@@ -4,12 +4,12 @@ Filename:    TutorialApplication.cpp
 -----------------------------------------------------------------------------
 
 This source file is part of the
-   ___                 __    __ _ _    _ 
+   ___                 __    __ _ _    _
   /___\__ _ _ __ ___  / / /\ \ (_) | _(_)
  //  // _` | '__/ _ \ \ \/  \/ / | |/ / |
 / \_// (_| | | |  __/  \  /\  /| |   <| |
 \___/ \__, |_|  \___|   \/  \/ |_|_|\_\_|
-      |___/                              
+      |___/
       Tutorial Framework
       http://www.ogre3d.org/tikiwiki/
 -----------------------------------------------------------------------------
@@ -31,6 +31,46 @@ void TutorialApplication::createScene(void)
     // create your scene here :)
 }
 
+//-------------------------------------------------------------------------------------
+void TutorialApplication::createFrameListener(void)
+{
+    BaseApplication::createFrameListener();
+}
+//-------------------------------------------------------------------------------------
+bool TutorialApplication::frameRenderingQueued(const Ogre::FrameEvent& evt)
+{
+    return BaseApplication::frameRenderingQueued(evt);
+}
+//-------------------------------------------------------------------------------------
+bool TutorialApplication::keyPressed( const OIS::KeyEvent &arg )
+{
+    return BaseApplication::keyPressed(arg);
+}
+//-------------------------------------------------------------------------------------
+bool TutorialApplication::keyReleased( const OIS::KeyEvent &arg )
+{
+    return BaseApplication::keyReleased(arg);
+}
+//-------------------------------------------------------------------------------------
+bool TutorialApplication::mouseMoved( const OIS::MouseEvent &arg )
+{
+    return BaseApplication::mouseMoved(arg);
+}
+//-------------------------------------------------------------------------------------
+bool TutorialApplication::mousePressed( const OIS::MouseEvent &arg, OIS::MouseButtonID id )
+{
+    return BaseApplication::mousePressed(arg, id);
+}
+//-------------------------------------------------------------------------------------
+bool TutorialApplication::mouseReleased( const OIS::MouseEvent &arg, OIS::MouseButtonID id )
+{
+    return BaseApplication::mouseReleased(arg, id);
+}
+//-------------------------------------------------------------------------------------
+bool TutorialApplication::quit(const CEGUI::EventArgs &e)
+{
+    return true;
+}
 
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
